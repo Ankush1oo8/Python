@@ -18,10 +18,10 @@ while len(guessed)<50:
 
 # if answer state is one of the states in all states from csv file
     if answer=="Exit":
-        missing=[]
-        for state in all_states:
-            if state not in guessed:
-                missing.append(state)
+        missing=[state for state in all_states if state not in  guessed]
+        # for state in all_states:
+        #     if state not in guessed:
+        #         missing.append(state)
         new_data=p.DataFrame(missing)
         new_data.to_csv("DAY25/US state Game/mssing_state.csv")
         break
