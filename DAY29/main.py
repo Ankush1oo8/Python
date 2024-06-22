@@ -42,7 +42,7 @@ def save():
                     
                     #reading old data
                     data=json.load(data_file)
-        except FileNotFoundError:
+        except:
                 with open("DAY29/data.json","w")as data_file:
                     json.dump(new_data,data_file, indent=4)
         else:        
@@ -63,7 +63,7 @@ def search():
     try:
         with open("DAY29/data.json")as data_file:
             data=json.load(data_file)
-    except FileNotFoundError:
+    except:
         messagebox.showinfo(title="ERROR",message="No Data file found!!")
     else:
         if website in data:
