@@ -7,9 +7,9 @@ my_lat=17.927910
 my_lng=78.499252
 
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/onecall"
-api_key = os.environ.get("4292924e11e28269b68a189ac7e5e159")
-account_sid = "AC700b49893312cc81c0b92ec364daf0b2"
-auth_token = os.environ.get("1536f6411121ca210ec21fefcf729699")
+api_key = os.environ.get("API_KEY")
+account_sid = "ID"
+auth_token = os.environ.get("TOKEN")
 
 weather_params = {
     "lat": my_lat,
@@ -38,7 +38,7 @@ if will_rain:
     message = client.messages \
         .create(
         body="It's going to rain today. Remember to bring an ☔️",
-        from_="+12515729886",
-        to="+918010017202"
+        from_="+NUM",
+        to="NUM"
     )
     print(message.status)
